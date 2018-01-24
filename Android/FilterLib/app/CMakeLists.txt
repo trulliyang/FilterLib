@@ -37,6 +37,9 @@ add_library(
              src/main/cpp/RenderFramework/Utils/TextureUtils.cpp
              src/main/cpp/RenderFramework/Utils/TextureUtils.h
 
+             src/main/cpp/ThirdPartyLibrary/phead.cpp
+             src/main/cpp/ThirdPartyLibrary/phead.h
+
              src/main/cpp/Tracker/Tracker.cpp
              src/main/cpp/Tracker/Tracker.h
              )
