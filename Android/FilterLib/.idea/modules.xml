@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FilterLib.iml" filepath="$PROJECT_DIR$/FilterLib.iml" />
-      <module fileurl="file://D:\work\FilterLib\Android\FilterLib\FilterLib.iml" filepath="D:\work\FilterLib\Android\FilterLib\FilterLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\work\FilterLib\Android\FilterLib\app\app.iml" filepath="D:\work\FilterLib\Android\FilterLib\app\app.iml" />
     </modules>
   </component>
 </project>

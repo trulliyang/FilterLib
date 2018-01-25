@@ -126,6 +126,7 @@ public class FLGLSurfaceView extends GLSurfaceView implements GLSurfaceView.Rend
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         GLES20.glViewport(0, 0, width, height);
+        Log.e("shiyang FL", "shiyang onSurfaceChanged w="+width+",h="+height);
     }
 
     private int mCameraWidth, mCameraHeight;

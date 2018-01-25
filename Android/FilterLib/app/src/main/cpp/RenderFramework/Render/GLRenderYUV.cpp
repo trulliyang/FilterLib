@@ -37,7 +37,7 @@ void GLRenderYUV::_readYUVMovie() {
     m_buf = new unsigned char[len];
     if (pFileYUV) {
         _LOG_ERROR("shiyang open yuv success\n");
-        fread(m_buf, 1, len, pFileYUV);
+        fread(m_buf, 1, (size_t) len, pFileYUV);
         fclose(pFileYUV);
     } else {
         _LOG_ERROR("shiyang open yuv failed\n");
@@ -74,14 +74,15 @@ int j=0;
 void GLRenderYUV::update()
 {
     j=j%50;
+
     unsigned char *ybuf = m_buf+j*720*1280*3/2;
     unsigned char *uvbuf = ybuf+720*1280;
 
     glBindTexture(GL_TEXTURE_2D, m_texture0Id);
-    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1280, 720,GL_LUMINANCE, GL_UNSIGNED_BYTE, ybuf);
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1280, 720, GL_LUMINANCE, GL_UNSIGNED_BYTE, ybuf);
 
     glBindTexture(GL_TEXTURE_2D, m_texture1Id);
-    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1280/2, 720/2,GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, uvbuf);
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, 1280/2, 720/2, GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, uvbuf);
 
     j++;
 }
